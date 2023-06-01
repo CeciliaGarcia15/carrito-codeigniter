@@ -1,0 +1,313 @@
+ERROR - 2023-05-28 00:17:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, Array)
+#6 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\app\Controllers\Carts.php(15): CodeIgniter\BaseModel->find(Array)
+#7 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(934): App\Controllers\Carts->index()
+#8 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+#9 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-28 00:17:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, [])
+ 7 APPPATH\Controllers\Carts.php(15): CodeIgniter\BaseModel->find([])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-28 00:29:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, Array)
+#6 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\app\Controllers\Carts.php(15): CodeIgniter\BaseModel->find(Array)
+#7 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(934): App\Controllers\Carts->index()
+#8 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+#9 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-28 00:29:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, [])
+ 7 APPPATH\Controllers\Carts.php(15): CodeIgniter\BaseModel->find([])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 01:49:21 --> Undefined variable $categorias
+in APPPATH\Views\back\productos\create.php on line 49.
+ 1 APPPATH\Views\back\productos\create.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/create', [], true)
+ 5 APPPATH\Controllers\Products.php(19): view('back/productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 01:54:52 --> Undefined array key "nombre"
+in APPPATH\Views\back\productos\create.php on line 50.
+ 1 APPPATH\Views\back\productos\create.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php', 50)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/create', [], true)
+ 5 APPPATH\Controllers\Products.php(26): view('back/productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 01:59:03 --> Undefined array key "nombre"
+in APPPATH\Views\back\productos\create.php on line 34.
+ 1 APPPATH\Views\back\productos\create.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/create', [], true)
+ 5 APPPATH\Controllers\Products.php(26): view('back/productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 02:37:36 --> Undefined variable $product
+in APPPATH\Views\back\productos\create.php on line 33.
+ 1 APPPATH\Views\back\productos\create.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/create', [], true)
+ 5 APPPATH\Controllers\Products.php(26): view('back/productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->create()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 02:44:05 --> Call to undefined function set_select()
+in APPPATH\Views\back\productos\create.php on line 34.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/create', [], true)
+ 4 APPPATH\Controllers\Products.php(26): view('back/productos/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->create()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-28 20:59:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, Array)
+#6 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\app\Controllers\Carts.php(15): CodeIgniter\BaseModel->find(Array)
+#7 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(934): App\Controllers\Carts->index()
+#8 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+#9 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-28 20:59:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, [])
+ 7 APPPATH\Controllers\Carts.php(15): CodeIgniter\BaseModel->find([])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-28 21:51:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, Array)
+#6 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\app\Controllers\Carts.php(15): CodeIgniter\BaseModel->find(Array)
+#7 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(934): App\Controllers\Carts->index()
+#8 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+#9 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-28 21:51:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, [])
+ 7 APPPATH\Controllers\Carts.php(15): CodeIgniter\BaseModel->find([])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-28 21:52:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, Array)
+#6 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\app\Controllers\Carts.php(15): CodeIgniter\BaseModel->find(Array)
+#7 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(934): App\Controllers\Carts->index()
+#8 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+#9 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\proyecto_garcia_ana_cecilia\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-28 21:52:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `productos`
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, [])
+ 7 APPPATH\Controllers\Carts.php(15): CodeIgniter\BaseModel->find([])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:10:38 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Carts.php on line 17.
+ 1 APPPATH\Controllers\Carts.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:10:49 --> Undefined array key "cantidad"
+in APPPATH\Controllers\Carts.php on line 25.
+ 1 APPPATH\Controllers\Carts.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad"', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:11:52 --> Undefined array key "cantidad"
+in APPPATH\Controllers\Carts.php on line 46.
+ 1 APPPATH\Controllers\Carts.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad"', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:25:58 --> Undefined array key "cantidad"
+in APPPATH\Controllers\Carts.php on line 46.
+ 1 APPPATH\Controllers\Carts.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad"', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:26:00 --> Undefined array key "cantidad"
+in APPPATH\Controllers\Carts.php on line 46.
+ 1 APPPATH\Controllers\Carts.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad"', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 22:26:01 --> Undefined array key "cantidad"
+in APPPATH\Controllers\Carts.php on line 46.
+ 1 APPPATH\Controllers\Carts.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad"', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:05:50 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Carts.php on line 19.
+ 1 APPPATH\Controllers\Carts.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:06:29 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Carts.php on line 19.
+ 1 APPPATH\Controllers\Carts.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:06:30 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Carts.php on line 19.
+ 1 APPPATH\Controllers\Carts.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:06:31 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Carts.php on line 19.
+ 1 APPPATH\Controllers\Carts.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:06:32 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Carts.php on line 19.
+ 1 APPPATH\Controllers\Carts.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-28 23:06:37 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Carts.php on line 19.
+ 1 APPPATH\Controllers\Carts.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Carts.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Carts->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

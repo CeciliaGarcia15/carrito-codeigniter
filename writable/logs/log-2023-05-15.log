@@ -1,0 +1,62 @@
+CRITICAL - 2023-05-15 00:51:01 --> Allowed fields must be specified for model: "App\Models\Product"
+in SYSTEMPATH\BaseModel.php on line 1242.
+ 1 SYSTEMPATH\BaseModel.php(1242): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\Product')
+ 2 SYSTEMPATH\BaseModel.php(757): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Products.php(35): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->store()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 01:13:35 --> Undefined variable $producto
+in APPPATH\Views\back\productos\index.php on line 50.
+ 1 APPPATH\Views\back\productos\index.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\index.php', 50)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/index', [], true)
+ 5 APPPATH\Controllers\Products.php(13): view('back/productos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 01:41:42 --> unlink(../public/img/productos/): Is a directory
+in APPPATH\Controllers\Products.php on line 46.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/img/productos/): Is a directory', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Controllers\\Products.php', 46)
+ 2 APPPATH\Controllers\Products.php(46): unlink('../public/img/productos/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->destroy('1')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 02:01:08 --> Undefined variable $products
+in APPPATH\Views\back\productos\index.php on line 37.
+ 1 APPPATH\Views\back\productos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/index', [], true)
+ 5 APPPATH\Controllers\Products.php(46): view('back/productos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 02:02:11 --> Undefined variable $products
+in APPPATH\Views\back\productos\index.php on line 37.
+ 1 APPPATH\Views\back\productos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/index', [], true)
+ 5 APPPATH\Controllers\Products.php(46): view('back/productos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 02:10:12 --> Undefined variable $product
+in APPPATH\Views\back\productos\edit.php on line 22.
+ 1 APPPATH\Views\back\productos\edit.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\edit.php', 22)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\proyecto_garcia_ana_cecilia\\app\\Views\\back\\productos\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/edit', [], true)
+ 5 APPPATH\Controllers\Products.php(46): view('back/productos/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Products->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
