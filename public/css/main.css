@@ -1,3 +1,7 @@
+html {
+    position: relative;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -5,7 +9,27 @@ body {
     color: white;
     text-align: justify;
   text-justify: inter-word;
+  overflow-x: hidden;
 
+}
+
+.mess-alert{
+    top: 8px;
+    z-index: 999;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.container{
+    min-height: 100vh;
+}
+
+.comerc-container{
+    min-height: 100vh;
 }
 
 .custom-icon {
@@ -72,3 +96,9 @@ background-color: #14141c;
 transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 1000px) {
+    .custom-badge{
+        right: 0;
+        left: 0;
+    }
+}

@@ -10,19 +10,19 @@ class Carts extends Controller
 
     public function index()
     {
-        $cart = [];
+        //$cart = [];
 
         if (session()->has('cart')) {
             $cart = session()->get('cart');
         }
-        
+
         // Obtén información adicional de los productos desde la base de datos
         $productModel = new Product();
         $products = [];
-        
+
         foreach ($cart as $item) {
             $product = $productModel->find($item['id']);
-        
+
             if ($product) {
                 $products[] = [
                     'id' => $product['id'],
@@ -32,27 +32,28 @@ class Carts extends Controller
                 ];
             }
         }
-        
+
         return view('carrito', ['products' => $products]);
     }
 
     public function agregarCarrito($productID)
     {
-        if (!session()->has('cart')) {
-            // Si el carrito no existe, inicializarlo como un array vacío
-            $cart = [];
-            session()->set('cart', $cart);
-        } else {
-            // Si el carrito existe, obtenerlo de la sesión
-            $cart = session()->get('cart');
-        }
-     
+
+        $cart = session()->get('cart') ? session()->get('cart') : [];
+        // if (!session()->has('cart')) {
+        //     // Si el carrito no existe, inicializarlo como un array vacío
+        //     $cart = [];
+        //     session()->set('cart', $cart);
+        // } else {
+        //     // Si el carrito existe, obtenerlo de la sesión
+        //     $cart = session()->get('cart');
+        // }
+
 
         // Verifica si el producto ya existe en el carrito
         $productIndex = $this->findProductIndex($productID, $cart);
-        var_dump($productIndex);
-        die();
-        if ($productIndex !== false) {
+
+        if ($productIndex !== -1) {
             // Verificar si la clave 'cantidad' existe antes de acceder a ella
             if (array_key_exists('cantidad', $cart[$productIndex])) {
                 // La clave 'cantidad' existe, incrementa su valor
@@ -71,7 +72,7 @@ class Carts extends Controller
 
         session()->set('cart', $cart);
 
-        return redirect()->to('/carrito');
+        return redirect()->to(base_url('/carrito'));
     }
 
     // Función auxiliar para encontrar el índice de un producto en el carrito
@@ -83,7 +84,7 @@ class Carts extends Controller
             }
         }
 
-        return false;
+        return -1;
     }
 
     public function eliminarCarrito($productId)

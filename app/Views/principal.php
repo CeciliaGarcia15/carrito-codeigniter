@@ -2,11 +2,11 @@
 
 <?= $this->section('content') ?>
 
-<div class="container mt-2 pb-5"> <?php
+<div class="container"> <?php
     /* var_dump(session()->get());
     die(); */
       if(isset($mensaje)){ ?>
-          <div class="alert alert-success" role="alert">
+          <div class="alert alert-success mess-alert" role="alert">
             <?php echo($mensaje); ?>
           </div>
       <?php }

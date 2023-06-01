@@ -1,7 +1,7 @@
 <?= $this->extend('layout') ?>
 
 <?= $this->section('content') ?>
-<div class="container mt-2" style="margin-bottom: 90px;">
+<div class="container mt-2 comerc-container" style="margin-bottom: 90px;">
     <div class="row">
     <h1 class="text-center">Comercialización</h1>
     </div>
