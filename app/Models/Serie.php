@@ -6,5 +6,5 @@ use CodeIgniter\Model;
 class Serie extends Model{
     protected $table      = 'series';
     // Uncomment below if you want add primary key
-    // protected $primaryKey = 'id';
+     protected $primaryKey = 'id';
 }

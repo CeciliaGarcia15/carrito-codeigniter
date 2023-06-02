@@ -41,12 +41,13 @@ class Products extends Controller{
                 'max_size[imagen,1024]'
             ]
             ]);
-        if(!$validacion){
+           
+         if(!$validacion){
             $session= session();
-            $session->setFlashdata('mensaje','Revise la información');
+            $session->setFlashdata('mensaje','La información ingresada no es valida');
             return redirect()->back()->withInput();
-        /* return $this->response->redirect(site_url('productos')); */
-        }
+         /* return $this->response->redirect(site_url('productos'));  */
+        } 
         if($imagen=$this->request->getFile('imagen')){
             $nuevoNombre = $imagen->getRandomName();
             $imagen->move('../public/img/productos/',$nuevoNombre);
@@ -79,6 +80,8 @@ class Products extends Controller{
             'producto'=>$this->request->getVar('producto'),
             'precio'=>$this->request->getVar('precio'),
             'cantidad'=>$this->request->getVar('cantidad'),
+            'categorias_id'=>$this->request->getVar('categoria'),
+            'series_id'=>$this->request->getVar('serie'),
             'baja'=>'NO'
         ];
         $id= $this->request->getVar('id');
