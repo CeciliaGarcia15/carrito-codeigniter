@@ -41,6 +41,7 @@ class Products extends Controller{
                 'max_size[imagen,1024]'
             ]
             ]);
+            
            
          if(!$validacion){
             $session= session();
@@ -48,6 +49,7 @@ class Products extends Controller{
             return redirect()->back()->withInput();
          /* return $this->response->redirect(site_url('productos'));  */
         } 
+        
         if($imagen=$this->request->getFile('imagen')){
             $nuevoNombre = $imagen->getRandomName();
             $imagen->move('../public/img/productos/',$nuevoNombre);
@@ -55,11 +57,12 @@ class Products extends Controller{
                 'producto'=>$this->request->getVar('producto'),
                 'precio'=>$this->request->getVar('precio'),
                 'cantidad'=>$this->request->getVar('cantidad'),
-                'categorias_id'=>$this->request->getVar('categoria'),
+                'categorias_id'=>(int)$this->request->getVar('categoria'),
                 'series_id'=>$this->request->getVar('serie'),
                 'baja'=>'NO',
                 'imagen'=>$nuevoNombre
             ];
+            
             $producto->insert($datos);
         }
 
@@ -70,6 +73,10 @@ class Products extends Controller{
     {
         $producto = new Product();
         $datos['producto']=$producto->where('id',$id)->first();
+        $categorias = new Categoria();
+        $series = new Serie();
+        $datos['categorias'] = $categorias->orderBy('categoria','ASC')->findAll();
+        $datos['series'] = $series->orderBy('serie','ASC')->findAll();
         $datos['title'] = 'Editar Producto';
         return view('back/productos/edit',$datos);
     }
@@ -127,13 +134,33 @@ class Products extends Controller{
         unlink($ruta); */
         //cambia de activo a inactivo el producto
         $datos=[
-            'producto'=>$this->request->getVar('producto'),
-            'precio'=>$this->request->getVar('precio'),
-            'cantidad'=>$this->request->getVar('cantidad'),
             'baja'=>'SI'
         ];
         $producto->update($id,$datos);
         //$producto->where('id',$id)->delete($id);
         return $this->response->redirect(site_url('/productos'));
+    }
+
+        public function search()
+    {
+        $search = $this->request->getVar('search');
+
+        $product = new Product();
+        $products = $product->search($search);
+
+        $datos['title'] = "Buscando: ".$search;
+        $datos['products'] = $products;
+
+        return view('back/productos/index', $datos);
+    }
+    public function inactivos()
+    {
+        $product = new Product();
+        $products = $product->inactivos();
+
+        $datos['title'] = 'Listado de Productos';
+        $datos['products'] = $products;
+
+        return view('back/productos/index', $datos);
     }
 }

@@ -67,9 +67,34 @@ $routes->post('/productos/store', 'Products::store');
 $routes->get('/productos/editar/(:num)', 'Products::edit/$1');
 $routes->post('/productos/update', 'Products::update');
 $routes->get('/productos/delete/(:num)', 'Products::destroy/$1');
-
+$routes->post('/productos/search', 'Products::search');
+$routes->get('/productos/inactivos', 'Products::inactivos');
+//categoriaS
+$routes->get('/categorias', 'categorias::index');
+$routes->get('/categorias/nuevo', 'categorias::create');
+$routes->post('/categorias/store', 'categorias::store');
+$routes->get('/categorias/editar/(:num)', 'categorias::edit/$1');
+$routes->post('/categorias/update', 'categorias::update');
+$routes->get('/categorias/delete/(:num)', 'categorias::destroy/$1');
+$routes->post('/categorias/search', 'categorias::search');
+$routes->get('/categorias/inactivos', 'categorias::inactivos');
+//series
+$routes->get('/series', 'series::index');
+$routes->get('/series/nuevo', 'series::create');
+$routes->post('/series/store', 'series::store');
+$routes->get('/series/editar/(:num)', 'series::edit/$1');
+$routes->post('/series/update', 'series::update');
+$routes->get('/series/delete/(:num)', 'series::destroy/$1');
+$routes->post('/series/search', 'series::search');
+$routes->get('/series/inactivos', 'series::inactivos');
 //CARRITO
 $routes->get('carrito', 'Carts::index');
 $routes->get('carrito/agregar/(:num)', 'Carts::agregarCarrito/$1');
 $routes->get('carrito/eliminar/(:num)', 'Carts::eliminarCarrito/$1');
 $routes->get('carrito/limpiar', 'Carts::limpiarCarrito');
+
+//factura
+$routes->get('factura/generar', 'fs::limpiarCarrito');
+
+
+

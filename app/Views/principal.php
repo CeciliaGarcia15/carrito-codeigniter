@@ -18,7 +18,7 @@
 
             <div class="carousel-item active">
                 <a href="#">
-                    <img src="<?php echo base_url(); ?>img/carrousel/kimetsu.png" id="carousel_principal" class="d-block w-100  img-fluid" alt="...">
+                    <img src="<?php echo base_url(); ?>img/series/kimetsu.png" id="carousel_principal" class="d-block w-100  img-fluid" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                     <?php if (session()->get('usuario')) : ?>
                         <button class="btn btn-info btn-enviar btn-lg text-uppercase fw-bolder" >
@@ -32,7 +32,7 @@
 
             <div class="carousel-item">
                 <a href="#">
-                    <img src="<?php echo base_url(); ?>img/carrousel/boruto.png" id="carousel_principal" class="d-block  img-fluid" alt="...">
+                    <img src="<?php echo base_url(); ?>img/series/boruto.png" id="carousel_principal" class="d-block  img-fluid" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                     <?php if (session()->get('usuario')) : ?>
                         <button class="btn btn-info btn-enviar btn-lg text-uppercase fw-bolder" >
@@ -45,7 +45,7 @@
             </div>
             <div class="carousel-item">
                 <a href="#">
-                    <img src="<?php echo base_url(); ?>img/carrousel/fairy_tail.png" id="carousel_principal" class="d-block  img-fluid" alt="...">
+                    <img src="<?php echo base_url(); ?>img/series/fairy_tail.png" id="carousel_principal" class="d-block  img-fluid" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                     <?php if (session()->get('usuario')) : ?>
                         <button class="btn btn-info btn-enviar btn-lg text-uppercase fw-bolder" >

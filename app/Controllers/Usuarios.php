@@ -77,6 +77,21 @@ class Usuarios extends Controller{
 
     public function store()
     {
+        $validacion = $this->validate([
+            'nombre'=>'required|min_length[5]',
+            'apellido'=>'required|min_length[5]',
+            'email'=>'required|is_unique[usuarios.email]',
+            'password' =>'required',
+            'user' =>'required|is_unique[usuarios.usuario]'
+            ]);
+            
+           
+         if(!$validacion){
+            $session= session();
+            $session->setFlashdata('message','La información ingresada no es valida');
+            return redirect()->back()->withInput();
+         /* return $this->response->redirect(site_url('productos'));  */
+        } 
         // Obtener los datos enviados desde el formulario
        $nombre = $this->request->getPost('nombre');
        $apellido = $this->request->getPost('apellido');

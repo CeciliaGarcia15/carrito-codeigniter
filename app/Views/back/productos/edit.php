@@ -1,7 +1,7 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
 
-<div class="container">
+<div class="container mb-5">
     <h1 class="text-center mb-2"><?= $title ?></h1>
     <form method="POST" action="<?php echo base_url(); ?>productos/update" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $producto['id']; ?>">
@@ -17,6 +17,28 @@
         <label for="cantidad" class="form-label">Cantidad</label>
         <input type="cantidad" value="<?= $producto['cantidad'];?>" class="form-control" name="cantidad" placeholder="Ingrese su email">
       </div>
+      <div class="mb-3">
+      <label for="categoria" class="form-label">Categoría</label>
+      <select id="categoria" name="categoria" class="form-select">
+    <option value="" disabled>Seleccione una categoría a la que pertenece el producto</option>
+    <?php foreach ($categorias as $categoria) : ?>
+        <option value="<?= $categoria['id']; ?>" <?= ($categoria['id'] == $producto['categorias_id']) ? 'selected' : ''; ?>>
+            <?= $categoria['categoria']; ?>
+        </option>
+    <?php endforeach; ?>
+</select>
+    </div>
+    <div class="mb-3">
+      <label for="cantidad" class="form-label">Serie</label>
+      <select id="serie" name="serie" class="form-select">
+    <option value="">Seleccione la serie a la que pertenece el producto</option>
+    <?php foreach ($series as $serie) : ?>
+        <option value="<?= $serie['id']; ?>" <?= ($serie['id'] == $producto['series_id']) ? 'selected' : ''; ?>>
+            <?= $serie['serie']; ?>
+        </option>
+    <?php endforeach; ?>
+</select>
+    </div>
       <div class="mb-3">
         <label for="imagen" class="form-label">Imagen</label><br>
         <img class="img-thumbnail" src="<?php echo base_url();?>/img/productos/<?= $producto['imagen']; ?>" 

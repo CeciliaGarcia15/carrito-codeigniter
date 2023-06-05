@@ -13,32 +13,42 @@
             <span>El carrito está vacío.</span>
         </div>
     <?php else : ?>
-        <table class="table" style="color:white;">
+        <table class="table text-center" style="color:white;">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Producto</th>
                     <th>Cantidad</th>
                     <th>Precio Unitario</th>
-                    <th>Precio total</th>
-                    <th></th>
+                    <th>Subtotal</th>
+                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($products as $product) : ?>
+                <?php $total = 0;
+                foreach ($products as $product) :
+                    $total += $product['precio'] * $product['cantidad'];
+                ?>
                     <tr>
                         <td><?= $product['id']; ?></td>
                         <td><?= $product['producto']; ?></td>
                         <td><?= $product['cantidad']; ?></td>
-                        <td><?= $product['precio']; ?></td>
-                        <td><?= $product['precio'] * $product['cantidad']; ?></td>
+                        <td>$<?= $product['precio']; ?></td>
+                        <td>$<?= $product['precio'] * $product['cantidad']; ?></td>
                         <td>
-                            <a href="<?php echo base_url(); ?>/carrito/eliminar/<?= $product['id']; ?>">Eliminar</a>
+                            <a class="btn btn-danger" href="<?php echo base_url(); ?>/carrito/eliminar/<?= $product['id']; ?>">Eliminar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
+                
+                
             </tbody>
         </table>
+        <p class="text-end fw-bolder fs-3" style="color: white;">TOTAL: $<?= $total; ?></p>
+        <p class="text-end">
+        <a class="btn btn-success" href="<?php echo base_url(); ?>/carrito/venta">Realizar compra</a>
+        </p>
+        
 
         <p>
             <a href="<?php echo base_url(); ?>carrito/limpiar" class="btn btn-primary">Vaciar Carrito</a>

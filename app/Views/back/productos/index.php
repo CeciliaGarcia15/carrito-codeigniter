@@ -1,18 +1,22 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
 <div class="container mt-3">
+<h4>
+        <i class="bi bi-arrow-left-circle-fill"></i>
+        <a href="<?php echo base_url(); ?>/productos" class="link-light">Productos</a>
+    </h4>
     <h1 class="text-center mb-2"><?= $title ?></h1>
     <div class="row mb-3">
         <div class="col-4">
-            <form class="input-group">
-                <input type="text" class="form-control" placeholder="Ingrese el email a buscar">
+            <form class="input-group" method="POST" action="<?php echo base_url(); ?>productos/search">
+                <input type="text" class="form-control" name="search" placeholder="Ingrese el email a buscar">
                 <div class="input-group-append">
                     <button class="btn btn-info" type="button">Buscar</button>
                 </div>
             </form>
         </div>
         <div class="col-6">
-            <a href="">
+            <a href="<?php echo base_url(); ?>productos/inactivos">
                 <span class="badge" style="background-color:red;">Ver inactivos</span>
             </a>
         </div>
@@ -20,8 +24,9 @@
             <a href="<?php echo base_url(); ?>productos/nuevo" class="btn btn-primary">Nuevo</a>
         </div>
     </div>
-    <div class="row">
-        <table class="table" style="color:white;">
+    <?php if (count($products) > 0) : ?>
+    <div class="row mb-3">
+        <table class="table" style="color:white; ">
             <thead>
                 <tr>
                     <th>#</th>
@@ -59,7 +64,11 @@
 
             </tbody>
         </table>
+        
     </div>
+    <?php else : ?>
+        <p>No se encontraron resultados.</p>
+    <?php endif; ?>
 </div>
 
 <?= $this->endSection() ?>

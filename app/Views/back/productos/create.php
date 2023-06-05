@@ -1,7 +1,7 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
 
-<div class="container">
+<div class="container mb-3">
   <!--TITULO-->
   <h1 class="text-center mb-2"><?= $title ?></h1>
 
