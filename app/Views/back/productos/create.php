@@ -40,7 +40,7 @@
     <div class="mb-3">
       <label for="cantidad" class="form-label">Serie</label>
       <select id="serie" name="serie" class="form-select">
-        <option value="">Seleccione la serie a la que pertenece el producto</option>
+        <option value="" >Seleccione la serie a la que pertenece el producto</option>
         <?php foreach ($series as $serie) : ?>
           <option value="<?= $serie['id']; ?>" <?= (old('serie') == $serie['id']) ? 'selected' : ''; ?>>
             <?= $serie['serie']; ?>

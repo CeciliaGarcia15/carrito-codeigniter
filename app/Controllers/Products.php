@@ -41,8 +41,8 @@ class Products extends Controller{
                 'max_size[imagen,1024]'
             ]
             ]);
-            
-           
+
+
          if(!$validacion){
             $session= session();
             $session->setFlashdata('mensaje','La información ingresada no es valida');
@@ -152,6 +152,21 @@ class Products extends Controller{
         $datos['products'] = $products;
 
         return view('back/productos/index', $datos);
+    }
+    public function searchCatalogo()
+    {
+        $search = $this->request->getVar('search');
+
+        $product = new Product();
+        $products = $product->search($search);
+
+        $datos['title'] = "Buscando: ".$search;
+        $datos['products'] = $products;
+        $categoria = new Categoria();
+        $serie = new Serie();
+        $datos['categorias'] = $categoria->where('baja','NO')->orderBy('categoria','asc')->findAll();
+        $datos['series'] = $serie->where('baja','NO')->orderBy('serie','asc')->findAll();
+        return view('/catalogo', $datos);
     }
     public function inactivos()
     {

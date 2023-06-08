@@ -26,11 +26,13 @@ class Usuarios extends Controller{
                 $datos = [
                     "email" =>$datosUsuario['email'],
                     "admin" =>$datosUsuario['usuario'],
+                    "id"=>$datosUsuario['id']
                 ];
             }else{
                 $datos = [
                     "email" =>$datosUsuario['email'],
-                    "usuario" =>$datosUsuario['usuario']
+                    "usuario" =>$datosUsuario['usuario'],
+                    "id"=>$datosUsuario['id']
                 ];
             }
             

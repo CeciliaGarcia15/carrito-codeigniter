@@ -8,8 +8,8 @@ body {
     background-color: #1c1f1e; 
     color: white;
     text-align: justify;
-  text-justify: inter-word;
-  overflow-x: hidden;
+    text-justify: inter-word;
+    overflow-x: hidden;
 
 }
 
@@ -79,7 +79,7 @@ footer {
 }
 
 .card-img-top {
-    height: 500px;
+    height: 350px;
     object-fit: cover;
 }
 

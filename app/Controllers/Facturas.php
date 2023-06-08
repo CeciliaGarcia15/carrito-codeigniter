@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\Factura;
+use App\Models\Product;
 use App\Models\User;
 use App\Models\Venta;
 use CodeIgniter\Controller;
@@ -34,10 +35,8 @@ class Facturas extends Controller{
             'fecha_compra' => date('Y-m-d H:i:s')
         ];
         $factura->insert($facturaData);
-
         // Obtener el ID de la factura recién insertada
-        $facturaId = $factura['id'];
-
+        $facturaId = $factura->insertID();
         // Redirigir al controlador "VentaController" con el ID de la factura
         return redirect()->to('venta/crear/' . $facturaId);
     }
@@ -45,9 +44,43 @@ class Facturas extends Controller{
     private function calcularTotal($productos)
     {
         $total = 0;
+        $product = new Product();
+
         foreach ($productos as $producto) {
-            $total += $producto['precio'] * $producto['cantidad'];
+            $p = $product->where('id',$producto['id'])->first();
+            $total += $p['precio'] * $producto['cantidad'];
         }
         return $total;
+    }
+
+    public function show($factura_id){
+        $factura = new Factura();
+        $user = new User();
+        $product = new Product(); 
+        $f = $factura->find($factura_id);
+        $venta = new Venta();
+        $ventas = $venta->where('facturas_id',$factura_id)->findAll();
+        $datos['usuario'] = $user->where('id',$f['usuarios_id'])->first();
+        $datos['factura'] = $f;
+        $datos['ventas'] = $ventas;
+        $productos = [];
+        foreach ($ventas as &$venta) {
+            $producto = $product->find($venta['productos_id']);
+            $productos[] = $producto;
+        }
+
+        $datos['productos'] = $productos;
+        $datos['title'] = 'Factura N° ';
+        return view('back/facturas/show',$datos);
+    }
+
+
+    public function historial($user_id){
+        $factura = New Factura();
+        
+        //el users de dentro de las llaves es la variable que se importa a la vista
+        $datos['facturas'] = $factura->where('usuarios_id',$user_id)->orderBy('id','desc')->findAll();
+        $datos['title'] = 'Historial de Compras';
+        return view('back/facturas/historial_compras',$datos);
     }
 }

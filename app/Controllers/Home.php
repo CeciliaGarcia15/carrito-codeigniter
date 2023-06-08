@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Product;
+use App\Models\Serie;
 
 class Home extends BaseController
 {
@@ -13,6 +15,16 @@ class Home extends BaseController
         $mensaje = session('mensaje');
         $datos['mensaje'] = $mensaje;
         return view('principal',$datos);
+    }
+    public function catalogo()
+    {
+        $producto = new Product();
+        $datos['products'] = $producto->where('baja', 'NO')->orderBy('id', 'DESC')->findAll();
+        $categoria = new Categoria();
+        $serie = new Serie();
+        $datos['categorias'] = $categoria->where('baja','NO')->orderBy('categoria','asc')->findAll();
+        $datos['series'] = $serie->where('baja','NO')->orderBy('serie','asc')->findAll();
+        return view('catalogo',$datos);
     }
 
     public function comercializacionIndex()

@@ -33,6 +33,9 @@
           </li>
         <?php elseif (session()->get('usuario')) : ?>
           <li class="nav-item">
+            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>catalogo">Catálogo</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>quienes_somos">quienes somos</a>
           </li>
           <li class="nav-item">
@@ -49,7 +52,7 @@
               <?= session()->get('usuario') ?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-capitalize" href="#">historial de compras</a></li>
+              <li><a class="dropdown-item text-capitalize" href="<?php echo base_url(); ?>venta/historial_compras/<?= session()->get('id') ?>">historial de compras</a></li>
               <li><a class="dropdown-item text-capitalize" href="<?php echo base_url(); ?>logout">Cerrar sesión</a></li>
             </ul>
           </li>
@@ -57,7 +60,9 @@
             <a href="<?php echo base_url(); ?>carrito" class="nav-link text-capitalize fw-bolder">
               <div class="d-inline-block">
                 <i class="bi bi-cart3 custom-icon"></i>
-                <span class="badge badge-danger custom-badge">3</span>
+                <?php if(session()->get('cart')) :?>
+                <span class="badge badge-danger custom-badge"><?php echo(count(session()->get('cart'))) ?></span>
+                <?php endif;?>
               </div>
             </a>
           </li>

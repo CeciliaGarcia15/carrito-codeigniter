@@ -1,0 +1,8 @@
+CRITICAL - 2023-06-06 19:57:21 --> Undefined array key "precio"
+in APPPATH/Controllers/Facturas.php on line 49.
+ 1 APPPATH/Controllers/Facturas.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/Facturas.php', 49)
+ 2 APPPATH/Controllers/Facturas.php(28): App\Controllers\Facturas->calcularTotal([...])
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->create()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

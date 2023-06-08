@@ -1,0 +1,147 @@
+CRITICAL - 2023-06-08 11:57:51 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH/Views/templates/header.php on line 60.
+ 1 APPPATH/Views/layout.php(9): require_once()
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/layout.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render('layout', [], true)
+ 5 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('principal', [], true)
+ 6 APPPATH/Controllers/Home.php(15): view('principal', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:28:34 --> array_count_values(): Can only count string and integer values, entry skipped
+in APPPATH/Controllers/Carts.php on line 65.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_count_values(): Can only count string and integer values, entry skipped', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/Carts.php', 65)
+ 2 APPPATH/Controllers/Carts.php(65): array_count_values([...])
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:46:00 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:32 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:34 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:36 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:37 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:37 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:37 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:44 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:44 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:45 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 14:53:45 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 15:00:40 --> Illegal offset type in isset or empty
+in APPPATH/Controllers/Carts.php on line 69.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Carts->agregarCarrito('13')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carts))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 18:23:13 --> Undefined variable $products
+in APPPATH/Views/back/productos/index.php on line 27.
+ 1 APPPATH/Views/back/productos/index.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/productos/index.php', 27)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/productos/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/productos/index', [], true)
+ 5 APPPATH/Controllers/Facturas.php(84): view('back/productos/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->historial('3')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 18:30:31 --> Undefined variable $products
+in APPPATH/Views/back/productos/index.php on line 27.
+ 1 APPPATH/Views/back/productos/index.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/productos/index.php', 27)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/productos/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/productos/index', [], true)
+ 5 APPPATH/Controllers/Facturas.php(84): view('back/productos/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->historial('3')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 18:32:08 --> Undefined variable $success
+in APPPATH/Views/back/facturas/historial_compras.php on line 11.
+ 1 APPPATH/Views/back/facturas/historial_compras.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $success', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/historial_compras.php', 11)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/historial_compras.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/historial_compras', [], true)
+ 5 APPPATH/Controllers/Facturas.php(84): view('back/facturas/historial_compras', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->historial('3')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 18:32:26 --> Undefined variable $product
+in APPPATH/Views/back/facturas/historial_compras.php on line 39.
+ 1 APPPATH/Views/back/facturas/historial_compras.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/historial_compras.php', 39)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/historial_compras.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/historial_compras', [], true)
+ 5 APPPATH/Controllers/Facturas.php(84): view('back/facturas/historial_compras', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->historial('3')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-08 19:40:47 --> Undefined variable $categorias
+in APPPATH/Views/catalogo.php on line 20.
+ 1 APPPATH/Views/catalogo.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/catalogo.php', 20)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/catalogo.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('/catalogo', [], true)
+ 5 APPPATH/Controllers/Products.php(166): view('/catalogo', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Products->searchCatalogo()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

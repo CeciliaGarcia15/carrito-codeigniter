@@ -46,7 +46,7 @@
         </table>
         <p class="text-end fw-bolder fs-3" style="color: white;">TOTAL: $<?= $total; ?></p>
         <p class="text-end">
-        <a class="btn btn-success" href="<?php echo base_url(); ?>/carrito/venta">Realizar compra</a>
+        <a class="btn btn-success" href="<?php echo base_url(); ?>factura/generar">Realizar compra</a>
         </p>
         
 

@@ -1,0 +1,240 @@
+CRITICAL - 2023-06-07 12:36:59 --> Undefined array key "precio"
+in APPPATH/Controllers/Facturas.php on line 49.
+ 1 APPPATH/Controllers/Facturas.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/Facturas.php', 49)
+ 2 APPPATH/Controllers/Facturas.php(28): App\Controllers\Facturas->calcularTotal([...])
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->create()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-07 12:54:22 --> mysqli_sql_exception: Table 'bd_garcia_ana_cecilia.factura' doesn't exist in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `fa...', 0)
+#1 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fa...')
+#2 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fa...')
+#3 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fa...', Array, false)
+#4 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/Facturas.php(38): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php(934): App\Controllers\Facturas->create()
+#9 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+#10 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-07 12:54:22 --> Table 'bd_garcia_ana_cecilia.factura' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `factura` (`usuarios_id`, `total`, `fecha_compra`) VALUES (\'3\', 152.8, \'2023-06-07 12:54:22\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `factura` (`usuarios_id`, `total`, `fecha_compra`) VALUES (\'3\', 152.8, \'2023-06-07 12:54:22\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `factura` (`usuarios_id`, `total`, `fecha_compra`) VALUES (\'3\', 152.8, \'2023-06-07 12:54:22\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `factura` (`usuarios_id`, `total`, `fecha_compra`) VALUES (:usuarios_id:, :total:, :fecha_compra:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Facturas.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->create()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 12:55:31 --> Cannot use object of type App\Models\Factura as array
+in APPPATH/Controllers/Facturas.php on line 41.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->create()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 13:11:12 --> Cannot use object of type App\Models\Factura as array
+in APPPATH/Controllers/Facturas.php on line 41.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->create()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 13:19:32 --> Undefined array key "precio"
+in APPPATH/Controllers/Ventas.php on line 20.
+ 1 APPPATH/Controllers/Ventas.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/Ventas.php', 20)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Ventas->create('7')
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 13:31:21 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:40:48 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:40:48 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:40:50 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:40:50 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:40:50 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:42:54 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:43:04 --> Undefined variable $products
+in APPPATH/Views/back/productos/index.php on line 27.
+ 1 APPPATH/Views/back/productos/index.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/productos/index.php', 27)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/productos/index.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/productos/index', [], true)
+ 5 APPPATH/Controllers/Facturas.php(75): view('back/productos/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->historial('3')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 14:43:24 --> Too few arguments to function App\Controllers\Facturas::show(), 0 passed in /opt/lampp/htdocs/proyecto_garcia_ana_cecilia/system/CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH/Controllers/Facturas.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 18:23:34 --> Undefined variable $factura
+in APPPATH/Views/back/facturas/show.php on line 20.
+ 1 APPPATH/Views/back/facturas/show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $factura', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php', 20)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show', [], true)
+ 5 APPPATH/Controllers/Facturas.php(75): view('back/facturas/show', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 18:24:02 --> Undefined array key 2
+in APPPATH/Views/back/facturas/show.php on line 38.
+ 1 APPPATH/Views/back/facturas/show.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php', 38)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show', [], true)
+ 5 APPPATH/Controllers/Facturas.php(75): view('back/facturas/show', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 18:27:45 --> Undefined array key "precio"
+in APPPATH/Views/back/facturas/show.php on line 47.
+ 1 APPPATH/Views/back/facturas/show.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php', 47)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show', [], true)
+ 5 APPPATH/Controllers/Facturas.php(75): view('back/facturas/show', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 18:29:31 --> Undefined array key "precio"
+in APPPATH/Views/back/facturas/show.php on line 53.
+ 1 APPPATH/Views/back/facturas/show.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php', 53)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show', [], true)
+ 5 APPPATH/Controllers/Facturas.php(75): view('back/facturas/show', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Facturas->show('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facturas))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:30:34 --> Undefined variable $productos
+in APPPATH/Views/back/facturas/show_pdf.php on line 39.
+ 1 APPPATH/Views/back/facturas/show_pdf.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php', 39)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show_pdf', [], true)
+ 5 APPPATH/Controllers/PdfController.php(38): view('back/facturas/show_pdf', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:34:16 --> Undefined variable $title
+in APPPATH/Views/back/facturas/show_pdf.php on line 9.
+ 1 APPPATH/Views/back/facturas/show_pdf.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php', 9)
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show_pdf', [], true)
+ 5 APPPATH/Controllers/PdfController.php(41): view('back/facturas/show_pdf', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:35:01 --> Undefined variable $productosModel
+in APPPATH/Controllers/PdfController.php on line 32.
+ 1 APPPATH/Controllers/PdfController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productosModel', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/PdfController.php', 32)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:40:22 --> Cannot modify header information - headers already sent
+in APPPATH/Controllers/PdfController.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/PdfController.php', 57)
+ 2 APPPATH/Controllers/PdfController.php(57): header('Content-Type: application/pdf')
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:42:27 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 394.
+ 1 APPPATH/Views/back/facturas/show_pdf.php(57): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show_pdf', [], true)
+ 5 APPPATH/Controllers/PdfController.php(41): view('back/facturas/show_pdf', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:43:32 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 394.
+ 1 APPPATH/Views/back/facturas/show_pdf.php(57): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show_pdf', [], true)
+ 5 APPPATH/Controllers/PdfController.php(41): view('back/facturas/show_pdf', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:43:34 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 394.
+ 1 APPPATH/Views/back/facturas/show_pdf.php(57): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show_pdf', [], true)
+ 5 APPPATH/Controllers/PdfController.php(41): view('back/facturas/show_pdf', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-07 19:43:40 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 394.
+ 1 APPPATH/Views/back/facturas/show_pdf.php(57): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(213): include('/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Views/back/facturas/show_pdf.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render('back/facturas/show_pdf', [], true)
+ 5 APPPATH/Controllers/PdfController.php(41): view('back/facturas/show_pdf', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\PdfController->generateFacturaPdf('8')
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
