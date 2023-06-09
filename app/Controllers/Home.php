@@ -8,6 +8,7 @@ use App\Models\Serie;
 
 class Home extends BaseController
 {
+  
     public function index()
     {
         $producto = new Product();
@@ -26,6 +27,25 @@ class Home extends BaseController
         $datos['series'] = $serie->where('baja','NO')->orderBy('serie','asc')->findAll();
         return view('catalogo',$datos);
     }
+    public function filtrarCatalogo()
+{
+    $producto = new Product();
+    // Obtener los valores seleccionados en los filtros
+    $categoriaSeleccionada = $this->request->getVar('categoria');
+    $serieSeleccionada = $this->request->getVar('serie');
+    var_dump($categoriaSeleccionada);
+    die();
+    // Obtener los productos filtrados desde tu modelo
+    $productosFiltrados = $producto->filtrarProductos($categoriaSeleccionada, $serieSeleccionada);
+
+    // Pasar los productos filtrados a la vista
+    $datos['products'] = $productosFiltrados;
+    $categoria = new Categoria();
+        $serie = new Serie();
+        $datos['categorias'] = $categoria->where('baja','NO')->orderBy('categoria','asc')->findAll();
+        $datos['series'] = $serie->where('baja','NO')->orderBy('serie','asc')->findAll();
+    return view('catalogo', $datos);
+}
 
     public function comercializacionIndex()
     {

@@ -53,6 +53,7 @@ $routes->post('/contacto/email', 'Home::contactoStore', ['as' => 'contacto_store
 $routes->get('/comercializacion', 'Home::comercializacionIndex', ['as' => 'comercializacion']);
 $routes->get('/terminos', 'Home::terminosIndex', ['as' => 'terminos']);
 $routes->get('/catalogo', 'Home::catalogo');
+$routes->post('/catalogo/filtrar', 'Home::filtrarCatalogo');
 //USUARIO
 $routes->get('/usuarios', 'Usuarios::index');
 $routes->get('/login', 'Usuarios::login');

@@ -1,0 +1,20 @@
+CRITICAL - 2023-06-09 19:11:22 --> Object of class App\Models\Product could not be converted to string
+in APPPATH/Controllers/Home.php on line 37.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->filtrarCatalogo()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 19:15:06 --> Undefined property: App\Controllers\Home::$producto
+in APPPATH/Controllers/Home.php on line 38.
+ 1 APPPATH/Controllers/Home.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$producto', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/Home.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->filtrarCatalogo()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 19:15:56 --> Undefined property: App\Controllers\Home::$load
+in APPPATH/Controllers/Home.php on line 13.
+ 1 APPPATH/Controllers/Home.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', '/opt/lampp/htdocs/proyecto_garcia_ana_cecilia/app/Controllers/Home.php', 13)
+ 2 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

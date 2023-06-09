@@ -7,7 +7,10 @@ use CodeIgniter\Controller;
 
 class Carts extends Controller
 {
-
+    public function __construct()
+    {
+        helper('url');
+    }
     public function index()
 {
     // Obtener el contenido actual del carrito (si existe)
@@ -61,8 +64,10 @@ public function agregarCarrito($productId)
         // Actualizar el carrito en la sesión
         session()->set('cart', $cart);
     }
-
-    return redirect()->to(base_url('/carrito'));
+    
+    $previousURL = previous_url();
+    return redirect()->to($previousURL);
+    /* return redirect()->to(base_url('/carrito')); */
 }
 
 // Función auxiliar para encontrar el índice de un producto en el carrito

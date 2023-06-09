@@ -26,4 +26,22 @@ class Product extends Model{
 {
     return $this->where('baja', 'SI')->findAll();
 }
+
+public function filtrarProductos($categoria, $serie)
+{
+    $builder = $this->db->table('productos');
+
+    // Aplicar filtros según los valores seleccionados
+    if (!empty($categoria)) {
+        $builder->where('categorias_id', $categoria);
+    }
+
+    if (!empty($serie)) {
+        $builder->where('series_id', $serie);
+    }
+
+    // Ejecutar la consulta y devolver los resultados
+    $query = $builder->get();
+    return $query->getResultArray();
+}
 }
