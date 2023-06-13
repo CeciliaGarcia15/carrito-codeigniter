@@ -80,4 +80,39 @@ class Categorias extends Controller{
         //$categoria->where('id',$id)->delete($id);
         return $this->response->redirect(site_url('/categorias'));
     }
+    public function search()
+    {
+        if (session()->logged_in && session()->has('admin')) {
+            $search = $this->request->getVar('search');
+
+            $categoria = new categoria();
+            $categorias = $categoria->search($search);
+    
+            $datos['title'] = "Buscando: ".$search;
+            $datos['categorias'] = $categorias;
+    
+            return view('back/categorias/index', $datos);
+        }else{
+            // Redireccionar o mostrar un mensaje de error
+            return redirect()->to('/acceso_denegado');
+        }
+        
+    }
+     public function inactivos()
+    {
+        if (session()->logged_in && session()->has('admin')) {
+            $categoria = new categoria();
+            $categorias = $categoria->inactivos();
+    
+            $datos['title'] = 'Listado de categoriaos';
+            $datos['categorias'] = $categorias;
+            $datos['inactivo'] = 1;
+    
+            return view('back/categorias/index', $datos);
+        }else{
+            // Redireccionar o mostrar un mensaje de error
+            return redirect()->to('/acceso_denegado');
+        }
+        
+    }
 }

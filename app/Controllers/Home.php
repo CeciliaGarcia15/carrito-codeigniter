@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Categoria;
 use App\Models\Product;
+use App\Models\Provincia;
 use App\Models\Serie;
 
 class Home extends BaseController
@@ -33,8 +34,7 @@ class Home extends BaseController
     // Obtener los valores seleccionados en los filtros
     $categoriaSeleccionada = $this->request->getVar('categoria');
     $serieSeleccionada = $this->request->getVar('serie');
-    var_dump($categoriaSeleccionada);
-    die();
+    
     // Obtener los productos filtrados desde tu modelo
     $productosFiltrados = $producto->filtrarProductos($categoriaSeleccionada, $serieSeleccionada);
 
@@ -74,6 +74,17 @@ class Home extends BaseController
     {
         
         return view('terminos');
+    }
+
+    public function domypago() {
+        $provincia = new Provincia();
+
+        $datos['provincias'] = $provincia->findAll();
+        return view('back/ventas/domicilioypago',$datos);
+    }
+
+    public function acceso_denegado(){
+        return view('sin_permisos');
     }
 
 }

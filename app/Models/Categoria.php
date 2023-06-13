@@ -10,4 +10,16 @@ class Categoria extends Model{
      protected $allowedFields=[
         'categoria','baja'
     ];
+
+
+    public function search($keyword)
+    {
+        return $this->like('categoria', $keyword)->findAll();
+    }
+
+    public function inactivos()
+{
+    return $this->where('baja', 'SI')->findAll();
+}
+
 }

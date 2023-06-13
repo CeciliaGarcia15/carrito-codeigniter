@@ -24,6 +24,15 @@ class Ventas extends Controller{
                 'cantidad' => $producto['cantidad']
             ];
             $venta->insert($ventaData);
+
+             // Actualizar el stock del producto y si el stock es 0 que lo de de baja
+        $newStock = $p['cantidad'] - $producto['cantidad'];
+        if($newStock == 0){
+            $product->update($producto['id'], ['cantidad' => $newStock, 'baja' => "SI"]);
+        }else{
+            $product->update($producto['id'], ['cantidad' => $newStock]);
+        }
+        
         }
 
         // Limpiar el carrito de compras después de completar las ventas
@@ -31,5 +40,7 @@ class Ventas extends Controller{
 
         return redirect()->to('factura/ver/'.$facturas_id);
     }
+
+  
 
 }

@@ -19,8 +19,9 @@ class Usuarios extends Controller{
         $pass = $this->request->getPost('pass');
         $usuario = new User();
         $datosUsuario = $usuario->where('email',$email)->first();
-        /* var_dump($datosUsuario['perfil_id']);
-        die(); */
+        if($datosUsuario['baja']=="SI"){
+            return redirect()->to(base_url('/login'))->with('mensaje','El usuario esta en la base de datos pero se encuentra dado de baja.');
+        }
         if(count($datosUsuario) > 0 && password_verify($pass,$datosUsuario['pass'] )){ 
             if($datosUsuario['perfil_id'] == 2){
                 $datos = [
@@ -32,7 +33,8 @@ class Usuarios extends Controller{
                 $datos = [
                     "email" =>$datosUsuario['email'],
                     "usuario" =>$datosUsuario['usuario'],
-                    "id"=>$datosUsuario['id']
+                    "id"=>$datosUsuario['id'],
+                    "nombre"=>$datosUsuario['nombre'].' '.$datosUsuario['apellido'],
                 ];
             }
             
@@ -41,6 +43,7 @@ class Usuarios extends Controller{
             $session = session();
             //guardamos dentro de la session el array de datos
             $session->set($datos);
+            session()->logged_in = true;
             //redireccionamos
             return redirect()->to(base_url('/'))->with('mensaje','Bienvenido');
         }else{
@@ -57,10 +60,19 @@ class Usuarios extends Controller{
         if ($session->has('email')) {
             $session->remove('email');
         }
+
+        if ($session->has('nombre')) {
+            $session->remove('nombre');
+        }
+
+        if ($session->has('id')) {
+            $session->remove('id');
+        }
         
         if ($session->has('admin')) {
             $session->remove('admin');
         }
+        session()->logged_in = false;
         return redirect()->to('/login')->with('message', 'Cierre de sesión exitoso');
     }
     public function register()

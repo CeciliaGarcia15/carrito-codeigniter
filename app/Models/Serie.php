@@ -10,4 +10,14 @@ class Serie extends Model{
      protected $allowedFields=[
         'serie','baja','imagen'
     ];
+
+    public function search($keyword)
+    {
+        return $this->like('serie', $keyword)->findAll();
+    }
+
+    public function inactivos()
+    {
+        return $this->where('baja', 'SI')->findAll();
+    }
 }

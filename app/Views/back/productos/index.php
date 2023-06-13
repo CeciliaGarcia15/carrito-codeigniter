@@ -9,16 +9,23 @@
     <div class="row mb-3">
         <div class="col-4">
             <form class="input-group" method="POST" action="<?php echo base_url(); ?>productos/search">
-                <input type="text" class="form-control" name="search" placeholder="Ingrese el email a buscar">
+                <input type="text" class="form-control" name="search" placeholder="Ingrese el producto a buscar">
                 <div class="input-group-append">
                     <button class="btn btn-info" type="button">Buscar</button>
                 </div>
             </form>
         </div>
         <div class="col-6">
+            <?php if(isset($inactivo)) : ?>
+                <a href="<?php echo base_url(); ?>productos">
+                <span class="badge" style="background-color:green;">Ver activos</span>
+            </a>
+           <?php else: ?>
             <a href="<?php echo base_url(); ?>productos/inactivos">
                 <span class="badge" style="background-color:red;">Ver inactivos</span>
             </a>
+            <?php endif; ?>
+            
         </div>
         <div class="col-2">
             <a href="<?php echo base_url(); ?>productos/nuevo" class="btn btn-primary">Nuevo</a>

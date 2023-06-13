@@ -5,6 +5,18 @@
   <div class="row justify-content-center align-items-center g-2">
     <h1 class="text-center">Contactanos</h1>
   </div>
+  <?php if(isset($success)){ ?>
+          <div class="alert alert-success mess-alert" role="alert">
+            <?php echo($success); ?>
+          </div>
+      <?php }
+    ?>
+    <?php if(session()->get('error')){ ?>
+          <div class="alert alert-danger mess-alert" role="alert">
+            <?php echo session()->get('error') ; ?>
+          </div>
+      <?php }
+    ?>
   <div class="row p-3">
     <div class="col-lg-6 col-md-12 col-sm-12">
       <h5>¡Cualquier consulta que tengas, no dudes en escribirnos!</h5>
@@ -15,21 +27,29 @@
       <h6><i class="bi bi-envelope"></i> anime.store@gmail.com</h6>
     </div>
     <div class="col-lg-6 col-md-12 col-sm-12 border border-start p-3">
-      <form class="form-floating">
+      <form class="form-floating" method="POST" action="<?php echo base_url(); ?>consultas/store">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-          <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su correo electronico" aria-describedby="emailHelp">
-        </div>
+          <?php if(session()->get('email')) : ?>
+          <input name="email" type="email" class="form-control" required id="exampleInputEmail1" value="<?= session()->get('email')?>" placeholder="Ingrese su correo electronico" aria-describedby="emailHelp">
+          <?php  else :?>
+            <input name="email" type="email" class="form-control" required id="exampleInputEmail1"  placeholder="Ingrese su correo electronico" aria-describedby="emailHelp">
+        <?php endif?>
+          </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Nombre</label>
-          <input  name="nombre" type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su nombre" aria-describedby="emailHelp">
+          <?php if(session()->get('nombre')) : ?>
+          <input  name="nombre" type="text" class="form-control"  required ="exampleInputEmail1" value="<?= session()->get('nombre')?>" placeholder="Ingrese su nombre" aria-describedby="emailHelp">
+          <?php  else :?>
+          <input  name="nombre" type="text" class="form-control" required id="exampleInputEmail1"  placeholder="Ingrese su nombre" aria-describedby="emailHelp">
+          <?php endif?>
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Consulta</label>
-          <textarea  name="consulta" class="form-control" placeholder="Ingrese su consulta" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea  name="consulta" class="form-control" required placeholder="Ingrese su consulta" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div class="d-flex justify-content-end">
-          <button type="submit" disabled  name="enviar" class="btn btn-info btn-enviar" id="enviar">Enviar</button>
+          <button type="submit"   name="enviar" class="btn btn-info btn-enviar" id="enviar">Enviar</button>
         </div>
       </form>
     </div>

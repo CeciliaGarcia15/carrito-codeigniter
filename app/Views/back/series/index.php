@@ -4,17 +4,23 @@
     <h1 class="text-center mb-2"><?= $title ?></h1>
     <div class="row mb-3">
         <div class="col-4">
-            <form class="input-group">
-                <input type="text" class="form-control" placeholder="Ingrese el email a buscar">
+            <form class="input-group" method="POST" action="<?php echo base_url(); ?>series/search">
+                <input type="text" class="form-control"   name="search" placeholder="Ingrese la serie a buscar">
                 <div class="input-group-append">
-                    <button class="btn btn-info" type="button">Buscar</button>
+                    <button type="submit" class="btn btn-info">Buscar</button>
                 </div>
             </form>
         </div>
         <div class="col-6">
-            <a href="">
+        <?php if(isset($inactivo)) : ?>
+                <a href="<?php echo base_url(); ?>series">
+                <span class="badge" style="background-color:green;">Ver activos</span>
+            </a>
+           <?php else: ?>
+            <a href="<?php echo base_url(); ?>series/inactivos">
                 <span class="badge" style="background-color:red;">Ver inactivos</span>
             </a>
+            <?php endif; ?>
         </div>
         <div class="col-2">
             <a href="<?php echo base_url(); ?>series/nuevo" class="btn btn-primary">Nuevo</a>

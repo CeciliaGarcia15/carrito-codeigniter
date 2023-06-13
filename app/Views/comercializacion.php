@@ -46,7 +46,7 @@
         
         <h5><i class="bi bi-box2"></i> Tipos de entregas:</h5>
         <li>Entrega a domicilio: El paquete es enviado directamente al domicilio del comprador. </li>
-        <li>Recogida en tienda: El comprador puede recoger el paquete en el Anime Store mas cercano a su domicilio. (Presione <a class="link-info" href="<?php echo base_url(); ?>contacto">aqui</a>  para ver donde nos encontramos).</li>
+        
     </div>
 </div>
 

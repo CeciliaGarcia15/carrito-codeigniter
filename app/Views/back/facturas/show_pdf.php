@@ -16,6 +16,9 @@
             width: 100%;
             padding: 8px;
         }
+        p{
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -26,22 +29,36 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h5>Información del comprador</h5>
-                <h6>Nombre y Apellido: <?= $usuario['apellido'] ?>, <?= $usuario['nombre'] ?></h6>
-                <h6>Email: <?= $usuario['email'] ?></h6>
+            <h5>Información del comprador</h5>
+            <p><strong>Nombre y Apellido:</strong>  <?= $usuario['apellido'] ?>, <?= $usuario['nombre'] ?> &nbsp;&nbsp;&nbsp;&nbsp;<strong>Email:</strong>  <?= $usuario['email'] ?></p>
             </div>
         </div>
         <div class="row">
             <h5>Información de la compra</h5>
-            <h6>Fecha: <?= $factura['fecha_compra'] ?></h6>
-            <h6>Domicilio: </h6>
-            <h6>Medio de pago: </h6>
-            <h6>Total: $<?= $factura['total'] ?> </h6>
+            <p>
+                <strong>Fecha: </strong>  <?= date("d/m/Y H:i:s", strtotime($factura['fecha_compra'])) ?> &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Provincia: </strong>  <?= $provincia['provincia'] ?> &nbsp;&nbsp;&nbsp;&nbsp;  
+                <strong>Ciudad: </strong>  <?= $envio['ciudad'] ?> 
+            </p>
+            <p>
+                <strong>Dirección: </strong>  <?= $envio['direccion'] ?> &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Codigo Postal: </strong>  <?= $envio['codigo_postal'] ?> &nbsp;&nbsp;&nbsp;&nbsp;  
+                <strong>Medio de pago: </strong> <?= $envio['forma_pago'] ?>
+            </p>
+        </div>
+        <br>
+        <div class="row">
+        <h5>Información de la empresa</h5>
+            <p>
+                <strong>Empresa:  </strong>  Anime Store &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Domicilio: </strong>  Santa Fé 1025  &nbsp;&nbsp;&nbsp;&nbsp;  
+                <strong>Telefono:  </strong> 3794336765 &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Email: </strong> anime.store@gmail.com
+            </p>
         </div>
         <table class="table">
             <thead>
                 <tr>
-                    
                     <th>Producto</th>
                     <th>Cantidad</th>
                     <th>Precio Unitario</th>
@@ -75,6 +92,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <h3>Total: $<?= $factura['total'] ?> </h3>
     </div>
 </body>
 

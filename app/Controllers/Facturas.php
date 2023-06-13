@@ -1,15 +1,22 @@
 <?php 
 namespace App\Controllers;
 
+use App\Models\Envio;
 use App\Models\Factura;
 use App\Models\Product;
+use App\Models\Provincia;
 use App\Models\User;
 use App\Models\Venta;
 use CodeIgniter\Controller;
 
 class Facturas extends Controller{
-    public function create()
+
+    //crea la factura y le pasa el id a la ventas
+    public function create($envioId)
     {
+        if (!(session()->logged_in && session()->has('usuario'))) {
+            return redirect()->to('/acceso_denegado');
+        }
         $factura = new Factura();
         $venta = new Venta();
 
@@ -32,7 +39,8 @@ class Facturas extends Controller{
         $facturaData = [
             'usuarios_id' => $u['id'], // Obtén el ID del usuario de alguna manera
             'total' => $total,
-            'fecha_compra' => date('Y-m-d H:i:s')
+            'fecha_compra' => date('Y-m-d H:i:s'),
+            'envios_id' =>$envioId
         ];
         $factura->insert($facturaData);
         // Obtener el ID de la factura recién insertada
@@ -53,16 +61,26 @@ class Facturas extends Controller{
         return $total;
     }
 
+    //muestra la factura
     public function show($factura_id){
+        if (!(session()->logged_in && session()->has('usuario'))) {
+            return redirect()->to('/acceso_denegado');
+        }
         $factura = new Factura();
         $user = new User();
         $product = new Product(); 
+        $envio = new Envio();
+        $provincia = new Provincia();
         $f = $factura->find($factura_id);
         $venta = new Venta();
         $ventas = $venta->where('facturas_id',$factura_id)->findAll();
+        $e = $envio->where('id',$f['envios_id'])->first();
+        $p = $provincia->where('id',$e['provincias_id'])->first();
         $datos['usuario'] = $user->where('id',$f['usuarios_id'])->first();
         $datos['factura'] = $f;
         $datos['ventas'] = $ventas;
+        $datos['envio'] = $e;
+        $datos['provincia']= $p;
         $productos = [];
         foreach ($ventas as &$venta) {
             $producto = $product->find($venta['productos_id']);
@@ -75,7 +93,11 @@ class Facturas extends Controller{
     }
 
 
+    //muestra el historial de facturas
     public function historial($user_id){
+        if (!(session()->logged_in && session()->has('usuario'))) {
+            return redirect()->to('/acceso_denegado');
+        }
         $factura = New Factura();
         
         //el users de dentro de las llaves es la variable que se importa a la vista

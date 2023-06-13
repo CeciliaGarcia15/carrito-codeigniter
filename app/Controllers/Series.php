@@ -118,4 +118,40 @@ class Series extends Controller{
         //$serie->where('id',$id)->delete($id);
         return $this->response->redirect(site_url('/series'));
     }
+
+    public function search()
+    {
+        if (session()->logged_in && session()->has('admin')) {
+            $search = $this->request->getVar('search');
+
+            $serie = new serie();
+            $series = $serie->search($search);
+    
+            $datos['title'] = "Buscando: ".$search;
+            $datos['series'] = $series;
+    
+            return view('back/series/index', $datos);
+        }else{
+            // Redireccionar o mostrar un mensaje de error
+            return redirect()->to('/acceso_denegado');
+        }
+        
+    }
+     public function inactivos()
+    {
+        if (session()->logged_in && session()->has('admin')) {
+            $serie = new serie();
+            $series = $serie->inactivos();
+    
+            $datos['title'] = 'Listado de serieos';
+            $datos['series'] = $series;
+            $datos['inactivo'] = 1;
+    
+            return view('back/series/index', $datos);
+        }else{
+            // Redireccionar o mostrar un mensaje de error
+            return redirect()->to('/acceso_denegado');
+        }
+        
+    }
 }

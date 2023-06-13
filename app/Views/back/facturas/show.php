@@ -6,21 +6,30 @@
         <i class="bi bi-arrow-left-circle-fill"></i>
         <a href="<?php echo base_url(); ?>venta/historial_compras/<?= $usuario['id'] ?>" class="link-light">Historial</a>
     </h4>
-    <h1><?= $title.' '.$factura['id']?> </h1>
+    <h1 class="text-center"><?= $title.' '.$factura['id']?> </h1><br>
 
     <div class="row">
-        <div class="col-md-12">
-            <h5>Información del comprador</h5>
+        <div class="col-md-4">
+            <h5 class="text-decoration-underline">Información del comprador</h5>
             <h6>Nombre y Apellido: <?= $usuario['apellido'] ?>, <?= $usuario['nombre'] ?></h6>
             <h6>Email: <?= $usuario['email'] ?></h6>
         </div>
-    </div>
-    <div class="row">
-        <h5>Información de la compra</h5>
-        <h6>Fecha: <?= $factura['fecha_compra'] ?></h6>
-        <h6>Domicilio: </h6>
-        <h6>Medio de pago: </h6>
-        <h6>Total: $<?= $factura['total'] ?> </h6>
+        <div class="col-md-4">
+            <h5 class="text-decoration-underline">Información de la compra</h5>
+            <h6>Fecha: <?= date("d/m/Y H:i:s", strtotime($factura['fecha_compra'])) ?></h6>
+            <h6>Provincia: <?= $provincia['provincia'] ?></h6>
+            <h6>Ciudad: <?= $envio['ciudad'] ?> </h6>
+            <h6>Dirección: <?= $envio['direccion'] ?> </h6>
+            <h6>Codigo Postal: <?= $envio['codigo_postal'] ?> </h6>
+            <h6>Medio de pago: <?= $envio['forma_pago'] ?> </h6>
+        </div>
+        <div class="col-md-4">
+            <h5 class="text-decoration-underline">Información de la empresa</h5>
+            <h6>Empresa: Anime Store</h6>
+            <h6>Domicilio: Santa Fé 1025 </h6>
+            <h6>Telefono: 3794336765 </h6>
+            <h6>Email: anime.store@gmail.com </h6>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-2">
@@ -28,6 +37,7 @@
 
         </div>
     </div>
+    <div class="row">
         <table class="table text-center" style="color:white;">
             <thead>
                 <tr>
@@ -65,7 +75,10 @@
 
             </tbody>
         </table>
-
+        </div>
+        <div class="row">
+        <h3 class="text-end">Total: $<?= $factura['total'] ?> </h3>
+        </div>
 </div>
 
 <?= $this->endSection() ?>

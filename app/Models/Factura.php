@@ -8,6 +8,8 @@ class Factura extends Model{
     // Uncomment below if you want add primary key
     protected $primaryKey = 'id';
     protected $allowedFields=[
-        'usuarios_id','total','fecha_compra'
+        'usuarios_id','total','fecha_compra','envios_id'
     ];
+
+    
 }

@@ -1,0 +1,9 @@
+CRITICAL - 2023-06-11 19:23:37 --> Invalid file: "ventas/domicilioypago.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ventas/domicilioypago.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ventas/domicilioypago.php', [], true)
+ 3 APPPATH\Controllers\Home.php(84): view('ventas/domicilioypago.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->domypago()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

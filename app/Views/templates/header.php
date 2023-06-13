@@ -12,16 +12,19 @@
 
         <?php if (session()->get('admin')) : ?>
           <li class="nav-item">
-            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>quienes_somos">productos</a>
+            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>productos">productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>quienes_somos">categorias</a>
+            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>categorias">categorias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>quienes_somos">facturas</a>
+            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>series">series</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>quienes_somos">mensajes</a>
+            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>facturas">facturas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>consultas">mensajes</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-capitalize fw-bolder" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,6 +70,9 @@
             </a>
           </li>
         <?php else : ?>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>catalogo">Catálogo</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link text-capitalize fw-bold" href="<?php echo base_url(); ?>quienes_somos">quienes somos</a>
           </li>

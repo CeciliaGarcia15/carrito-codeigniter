@@ -2,10 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Models\Envio;
 use Dompdf\Dompdf;
 use App\Models\Factura;
 use App\Models\Venta;
 use App\Models\Product;
+use App\Models\Provincia;
 use App\Models\User;
 
 class PdfController extends BaseController
@@ -17,14 +19,19 @@ class PdfController extends BaseController
         $ventaModel = new Venta();
         $productoModel = new Product();
         $userModel = new User();
+        $envio = new Envio();
+        $provincia = new Provincia();
 
         $factura = $facturaModel->find($factura_id);
         $usuario = $userModel->find($factura['usuarios_id']);
         $ventas = $ventaModel->where('facturas_id', $factura_id)->findAll();
+        $e = $envio->where('id',$factura['envios_id'])->first();
+        $p = $provincia->where('id',$e['provincias_id'])->first();
 
         $data['factura'] = $factura;
         $data['usuario'] = $usuario;
-
+        $data['envio'] = $e;
+        $data['provincia']= $p;
 
         // Obtener los productos asociados a las ventas
         $productos = [];
